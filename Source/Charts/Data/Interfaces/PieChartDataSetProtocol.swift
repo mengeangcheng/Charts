@@ -73,4 +73,10 @@ public protocol PieChartDataSetProtocol: ChartDataSetProtocol
     /// the line join style for the slice
     var sliceStrokeLineJoinStyle: CAShapeLayerLineJoin { get set }
 
+    /// the width used for drawing borders around the slices. If borderWidth == 0, no border will be drawn.
+    var sliceBorderWidth: CGFloat { get set }
+
+    /// the color drawing borders around the slices.
+    var sliceBorderColor: NSUIColor { get set }
+
 }

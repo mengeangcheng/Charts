@@ -117,6 +117,11 @@ open class PieChartDataSet: ChartDataSet, PieChartDataSetProtocol
     
     /// the line join style for the slice
     open var sliceStrokeLineJoinStyle: CAShapeLayerLineJoin = .miter
+    /// the width used for drawing borders around the slices. If borderWidth == 0, no border will be drawn.
+    open var sliceBorderWidth: CGFloat = 0.0
+
+    /// the color drawing borders around the slices.
+    open var sliceBorderColor: NSUIColor = NSUIColor.black
     
     // MARK: - NSCopying
 
@@ -137,6 +142,8 @@ open class PieChartDataSet: ChartDataSet, PieChartDataSetProtocol
         copy.entryLabelFont = entryLabelFont
         copy.entryLabelColor = entryLabelColor
         copy.highlightColor = highlightColor
+        copy.sliceBorderWidth = sliceBorderWidth
+        copy.sliceBorderColor = sliceBorderColor
         return copy
     }
 }
